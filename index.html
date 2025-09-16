@@ -1,28 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <p>Visitantes: <span id="contador"></span></p>
-
-<script>
-  fetch('https://api.countapi.xyz/hit/skardec.github.io/machine_of_optimization')
-    .then(res => res.json())
-    .then(res => {
-      document.getElementById('contador').innerText = res.value;
-    });
-</script>
-  <p>Visitantes: <span id="contador"></span></p>
-<p>Último acesso: <span id="ultimo"></span></p>
-
-<script>
-  fetch("https://seuworker.cloudflare.workers.dev")
-    .then(res => res.json())
-    .then(res => {
-      document.getElementById("contador").innerText = res.total;
-      document.getElementById("ultimo").innerText = res.ultimo_acesso;
-    });
-</script>
-
-
   
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -121,6 +99,26 @@
   <footer class="bg-blue-900 text-white text-center p-4 mt-8">
     <p>© 2025 Sérgio Kardec. Todos os direitos reservados.</p>
   </footer>
+  <p>Visitantes: <span id="contador"></span></p>
+
+<script>
+  fetch('https://api.countapi.xyz/hit/skardec.github.io/machine_of_optimization')
+    .then(res => res.json())
+    .then(res => {
+      document.getElementById('contador').innerText = res.value;
+    });
+</script>
+  <p>Visitantes: <span id="contador"></span></p>
+<p>Último acesso: <span id="ultimo"></span></p>
+
+<script>
+  fetch("https://seuworker.cloudflare.workers.dev")
+    .then(res => res.json())
+    .then(res => {
+      document.getElementById("contador").innerText = res.total;
+      document.getElementById("ultimo").innerText = res.ultimo_acesso;
+    });
+</script>
 
 
 </body>
